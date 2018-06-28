@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  font-weight: 800 !important;
+    margin-bottom: 0px !important;
+    font-size: 25px !important;
+    line-height: 30px !important;
+    letter-spacing: normal !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    color: rgb(72, 72, 72) !important;
+}
+
+.color-text {
+  color:rgb(165, 41, 3);
+  font-size:12px;
+  font-weight:700;
+  line-height:16px;
+  text-transform:uppercase;
+}
+
+.place-name {
+  color: rgb(72, 72, 72);
+  font-size:16px;
+  line-height:22px;
+  font-weight:700;  
+}
+
+.price {
+  font-size:14px;
+  line-height:18px;
+  color: rgb(72, 72, 72) !important;
+}
+
+img {
+/*   width:100%; */
+  border-radius:3px;
+}
+
+span {
+  display:block;
+}
+
+.checked {
+  color: rgb(0, 132, 137) !important;
+  font-size:9px;
+}
+.text-desc {
+  font-size:14px!important;
+}
+
+.text-color {
+  color:rgb(255, 180, 0)!important;
+  font-size:12px!important;
+}
+
+.rating {
+  font-size:12px;
+}
