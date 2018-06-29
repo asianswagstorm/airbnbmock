@@ -1,0 +1,48 @@
+
+  
+  .container {
+    width: 960px;
+    margin: 0 auto;
+  }
+  
+  
+  select {
+    width: 240px;
+    height: 40px;
+    background-color: white;
+    font-family: sans-serif;
+    color: black;
+    padding-left: 10px;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+  ul{
+    margin: 0;
+    padding:0;
+    list-style: none;
+  }
+  h4 {
+    font-size: 1em;
+    margin:0 0 15px;
+  }
+ 
+  .list li {
+    font-size: 0.875em;
+    line-height: 1.25em;
+    letter-spacing: 0.75px;
+    padding: 2px 0;
+    cursor: default;
+    text-decoration-color: black;
+    color:gray;
+  }
+  .list li:hover {
+    color: grey;
+  }
+
+
+  .new:after {
+    content: " New";
+    color: #16D1C1;
+  }
+ 

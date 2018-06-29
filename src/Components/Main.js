@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './Main.css';
+import ReactDOM from 'react-dom';
+import '../css/Main.css';
 
 class Main extends Component {
     constructor(){
@@ -7,7 +8,6 @@ class Main extends Component {
     
       }
   
-      
     render() {
       return (
         <section id="4col">
@@ -20,14 +20,14 @@ class Main extends Component {
                 <figcaption>
                   <span className="color-text">ENTIRE CHALET · SOUTH LAKE TAHOE</span>
                   <span className="place-classname">The Lake Tahoe Chalet</span>
-                  <span className="price">Rp1,744,281 per night. Free Cancelation</span>
+                  <span className="price">$414 CAD per night. Free Cancelation</span>
                   <span className="rating">
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
-                    163.superhost
+                    163.Superhost
                   </span>
                 </figcaption>
               </figure>
@@ -37,16 +37,16 @@ class Main extends Component {
               <figure>
                 <img src="https://a0.muscache.com/4ea/air/v2/pictures/52a1e88d-c589-4d88-a0b0-a106270d00f1.jpg" className="w-100 mb-2" alt=""/>
                 <figcaption>
-                  <span className="color-text">verified.barcelona</span>
-                  <span className="place-classname">Exquisito apartamento con espacios abiertos y luz</span>
-                  <span className="price">Rp1,744,281 per night. Free Cancelation</span>
+                  <span className="color-text">Entire APARTMENT Barcelona</span>
+                  <span className="place-classname">Sunny apartment near metro station.</span>
+                  <span className="price">$110 CAD per night. Free Cancelation</span>
                   <span className="rating">
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
-                    163.superhost
+                    163.Superhost
                   </span>
                 </figcaption>
               </figure>
@@ -56,16 +56,16 @@ class Main extends Component {
               <figure>
                 <img src="https://a0.muscache.com/im/pictures/23863364/b733008b_original.jpg" className="w-100 mb-2" alt=""/>
                 <figcaption>
-                  <span className="color-text">ENTIRE HOUSE · FLORENCE</span>
-                  <span className="place-classname">TREEhouse casaBARTHEL</span>
-                  <span className="price">Rp1,744,281 per night. Free Cancelation</span>
+                  <span className="color-text">ENTIRE HOUSE · TORONTO</span>
+                  <span className="place-classname">Treehouse live your childhood dreams</span>
+                  <span className="price">$56 CAD per night. Free Cancelation</span>
                   <span className="rating">
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
-                    163.superhost
+                    163.Superhost
                   </span>
                 </figcaption>
               </figure>
@@ -75,16 +75,16 @@ class Main extends Component {
               <figure>
                 <img src="https://a0.muscache.com/im/pictures/48806892/20c44ce1_original.jpg" className="w-100 mb-2" alt=""/>
                 <figcaption>
-                  <span className="color-text">PRIVATE ROOM · NAZELLES-NÉGRON</span>
-                  <span className="place-classname">Amboise Troglodyte/Chez Hélène</span>
-                  <span className="price">Rp1,744,281 per night. Free Cancelation</span>
+                  <span className="color-text">PRIVATE ROOM · LIMA PERU</span>
+                  <span className="place-classname">Very Cozy Room</span>
+                  <span className="price">$60 CAD per night. Free Cancelation</span>
                   <span className="rating">
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
-                    163.superhost
+                    163.Superhost
                   </span>
                 </figcaption>
               </figure>
@@ -95,15 +95,15 @@ class Main extends Component {
                 <img src="https://a0.muscache.com/im/pictures/13206216/24ebd66e_original.jpg" className="w-100 mb-2" alt=""/>
                 <figcaption>
                   <span className="color-text">PRIVATE ROOM · BARCELONA</span>
-                  <span className="place-classname">Amboise Troglodyte/Chez Hélène</span>
-                  <span className="price">Rp1,744,281 per night. Free Cancelation</span>
+                  <span className="place-classname">Nice House</span>
+                  <span className="price">$281 CAD per night. Free Cancelation</span>
                   <span className="rating">
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
-                    163.superhost
+                    163.Superhost
                   </span>
                 </figcaption>
               </figure>
@@ -113,16 +113,16 @@ class Main extends Component {
               <figure>
                 <img src="https://a0.muscache.com/im/pictures/812e040f-6f6f-4cae-ad67-66c050b57c1f.jpg" className="w-100 mb-2" alt=""/>
                 <figcaption>
-                  <span className="color-text">ENTIRE HOUSE.JOSHUA TREE</span>
-                  <span className="place-classname">Amboise Troglodyte/Chez Hélène</span>
-                  <span className="price">Rp1,744,281 per night. Free Cancelation</span>
+                  <span className="color-text">ENTIRE HOUSE.WIEN</span>
+                  <span className="place-classname">Nice House</span>
+                  <span className="price">$281 CAD per night. Free Cancelation</span>
                   <span className="rating">
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
-                    163.superhost
+                    163.Superhost
                   </span>
                 </figcaption>
               </figure>
@@ -133,15 +133,15 @@ class Main extends Component {
                 <img src="https://a0.muscache.com/im/pictures/53992414/64510035_original.jpg" className="w-100 mb-2" alt=""/>
                 <figcaption>
                   <span className="color-text">ENTIRE APARTMENT.RIVA</span>
-                  <span className="place-classname">Amboise Troglodyte/Chez Hélène</span>
-                  <span className="price">Rp1,744,281 per night. Free Cancelation</span>
+                  <span className="place-classname">Nice House</span>
+                  <span className="price">$281 CAD per night. Free Cancelation</span>
                   <span className="rating">
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
-                    163.superhost
+                    163.Superhost
                   </span>
                 </figcaption>
               </figure>
@@ -152,15 +152,15 @@ class Main extends Component {
                 <img src="https://a0.muscache.com/im/pictures/45680811/f4987a12_original.jpg" className="w-100 mb-2" alt=""/>
                 <figcaption>
                   <span className="color-text">ENTIRE HOUSE.PIONEERTOWN</span>
-                  <span className="place-classname">Amboise Troglodyte/Chez Hélène</span>
-                  <span className="price">Rp1,744,281 per night. Free Cancelation</span>
+                  <span className="place-classname">Nice House</span>
+                  <span className="price">$281 CAD per night. Free Cancelation</span>
                   <span className="rating">
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
                     <i className="fa fa-star checked"></i>
-                    163.superhost
+                    163.Superhost
                   </span>
                 </figcaption>
               </figure>

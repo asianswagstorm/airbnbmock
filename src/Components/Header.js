@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Carousel from "./addons/Carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import './Header.css';
+import '../css/Header.css';
+
 class Header extends Component {
     constructor(){
         super();
@@ -11,57 +11,67 @@ class Header extends Component {
     
     render = () => {
       return (
-
-      <div id="header">
-<Carousel/>
-        
-        <div id="nav">
-            <img id="logo" src="/images/logo.png" id="logo" />
-              
-            <a href="https://www.airbnb.ca/login" class="nav_links">Log In</a>
-            <a href="https://www.airbnb.ca/signup_login" class="nav_links">Sign Up</a>
-            <a href="https://www.airbnb.ca/help" class="nav_links">Help</a>
-            <a href="https://www.airbnb.ca/host/homes?from_nav=1" class="nav_links">Become a host</a>
+<div className="Header">
+        {/*Nav Bar*/}
+    <div className="tm-welcome-section">
+    <Carousel/>
+      <div className="container tm-navbar-container">
+        <div className="row">
+          <div className="col-lg-12">
+          <nav class="navbar navbar-expand-lg narbar-light">
+                            <a className="navbar-brand mr-auto" href="#">
+                                <img src="images/logo.png" alt="Site logo"/>
+                                Airbnb
+                            </a>
+                            <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span className="navbar-toggler-icon"></span>
+                            </button>
+                            <div id="mainNav" className="collapse navbar-collapse tm-bg-white">
+                                <ul className="navbar-nav ml-auto">
+              <li className="nav-item">
+               <img className="nav-item" src="images/logo.png" alt="Site logo"/>
+               </li>
+                <li className="nav-item">
+                  <a href="https://www.airbnb.ca/login" className="nav-link tm-nav-link tm-text-white">Login</a>
+                </li>
+                <li className="nav-item">
+                  <a href="https://www.airbnb.ca/signup_login" className="nav-link tm-nav-link tm-text-white">Sign Up</a>
+                </li>
+                <li className="nav-item">
+                  <a href="https://www.airbnb.ca/help" className="nav-link tm-nav-link tm-text-white">Help</a>
+                </li>
+                <li className="nav-item">
+                  <a href="https://www.airbnb.ca/host/homes?from_nav=1" className="nav-link tm-nav-link tm-text-white">Become a host</a>
+                </li>
+              </ul>
+                        </div>                            
+                    </nav>
+          </div>
         </div>
-        
-        <div id="welcome_text_div">
-            <p id="welcome_text">Book unique homes and experiences all over the world.</p>
-        </div>     
-        <div id="searchbar_div">
-            <div id="searchbar">
-                <div id="where_div">
-                    <p id="where_text">
-                        Where do you want to go?
-                    </p>
-                </div>
-                <div  id="check_in_div">
-                    <p id="check_in_text">
-                        Check In
-                    </p>
-                </div>
-                <div id="check_out_div">
-                    <p id="check_out_text">
-                        Check Out
-                    </p>
-                </div>
-                <div id="guest_div">
-                    <p id="guest_text">
-                        1 Guest
-                    </p>
-                </div>
-                <div id="search_button_div">
-                    <a href="#" id="search_button">
-                        Search
-                    </a>
-                </div>
+        <div className="container text-center tm-welcome-container">
+            <div className="tm-welcome">
+          <h4 className="text mb-4 tm-site-name"> Book unique homes and experiences all over the world.</h4>
+            </div> 
+        </div>
+        <div className="container">
+            <div className="tm-search-form-container">
+                <form action="index.html" method="GET" className="form-inline tm-search-form">
+                    <div className="form-group tm-search-box">
+                        <input type="text" name="keyword" className="form-control tm-search-input" placeholder="Where would you like to go ..."/> 
+                        
+                        <input type="submit" value="Search" className="form-control tm-search-submit"/>
+                    </div>
+                </form>
             </div>
         </div>
-       
+      </div>
     </div>
-         
-
-        
-      ); 
+</div>  ); 
+          
         }
     }
 export default Header;
+
+/*   <nav className="navbar navbar-expand-lg narbar-light">
+              
+            </nav>*/
