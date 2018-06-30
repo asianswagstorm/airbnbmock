@@ -13,9 +13,9 @@ class Footer extends Component {
        
 <div className="container">
        
-     <div class="row tm-mb-medium">
-          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
-            <h4 class="mb-4 tm-font-300">Airbnb</h4>
+     <div className="row tm-mb-medium">
+          <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
+            <h4 className="mb-4 tm-font-300">Airbnb</h4>
               <ul className="list">
               <a target="_blank" href="https://www.airbnb.ca/careers"><li>Careers</li></a>
               <a target="_blank" href="https://press.atairbnb.com/"><li>Press</li></a>
@@ -24,8 +24,8 @@ class Footer extends Component {
               <a target="_blank" href="https://www.airbnb.ca/diversity"><li>Diversity & Belonging</li></a> 
               </ul>
           </div>
-          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
-           <h4 class="mb-4 tm-font-300">Discover</h4>
+          <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
+           <h4 className="mb-4 tm-font-300">Discover</h4>
               <ul className="list">
                 <a target="_blank" href="https://www.airbnb.ca/trust"><li>Trust & Safety</li></a>
                 <a target="_blank" href="https://www.airbnb.ca/invite?r=6"><li>Travel Credit</li></a>
@@ -37,8 +37,8 @@ class Footer extends Component {
               </ul>
           </div>
             
-          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
-            <h4 class="mb-4 tm-font-300">Hosting</h4>
+          <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
+            <h4 className="mb-4 tm-font-300">Hosting</h4>
             <ul className="list">
             <a target="_blank" href="https://www.airbnb.ca/host/homes?from_footer=1"> <li>Why Host</li></a>
             <a target="_blank" href="https://www.airbnb.ca/hospitality"><li>Hospitality</li></a>
@@ -47,11 +47,11 @@ class Footer extends Component {
             </ul>
           </div>
 
-          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
-               <ul class="social-icon">
+          <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
+               <ul className="social-icon">
                          <a href="https://www.facebook.com/airbnb" className="fa fa-facebook"></a>
-                         <a href="https://twitter.com/airbnb" class="fa fa-twitter"></a>
-                         <a href="https://www.instagram.com/airbnb/" class="fa fa-instagram"></a>      
+                         <a href="https://twitter.com/airbnb" className="fa fa-twitter"></a>
+                         <a href="https://www.instagram.com/airbnb/" className="fa fa-instagram"></a>      
                 </ul>
 
              <ul className="list">

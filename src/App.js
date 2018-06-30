@@ -19,7 +19,7 @@ class App extends Component {
       <div className="App">
 
     <div className="row">
-        <div class="col-xl-12"> 
+        <div className="col-xl-12"> 
           <div className="App-Header">
           <Header/>
           </div>
@@ -27,7 +27,7 @@ class App extends Component {
     </div>  
 
     <div className="row">
-        <div class="col-xl-12"> 
+        <div className="col-xl-12"> 
           <div className="App-Explore">
           <Explore/>
           </div>
@@ -35,7 +35,7 @@ class App extends Component {
     </div>    
 
     <div className="row">
-        <div class="col-xl-12"> 
+        <div className="col-xl-12"> 
           <div className="App-Airbnbplus">
           <Airbnbplus/>
           </div>
@@ -43,7 +43,7 @@ class App extends Component {
     </div>  
         
     <div className="row">
-      <div class="col-xl-12"> 
+      <div className="col-xl-12"> 
          <div className="App-Body">
             <Main/>
          </div>
@@ -51,7 +51,7 @@ class App extends Component {
     </div>
 
    <div className="row">
-      <div class="col-xl-12"> 
+      <div className="col-xl-12"> 
         <hr></hr>
         <div className = "App-Footer">
           <Footer/>

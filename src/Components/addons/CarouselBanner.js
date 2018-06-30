@@ -1,14 +1,14 @@
-import React from "react";
+import React, {Component} from "react";
 import { Carousel } from "react-responsive-carousel";
 
-
-export default () => (
-  <Carousel autoPlay>
-   <div className="tm-welcome-section">
+export default() =>(
+<Carousel autoPlay>
+<div className="tm-welcome-section">
       <img src="./images/banners/banner1.jpg" />
-      <p className="legend">Relax in Los Angelos</p>
+      <p className="legend">Legend 1</p>
     </div>
-    <div className="tm-welcome-section">
+
+<div className="tm-welcome-section">
       <img src="./images/banners/banner2.jpg" />
       <p className="legend">Legend 2</p>
     </div>
@@ -44,6 +44,23 @@ export default () => (
       <img src="./images/banners/banner10.jpg" />
       <p className="legend">Homes in Shanghai</p>
     </div>
-    
-  </Carousel>
+</Carousel>
 );
+   /*class CarouselBanner extends Component {
+  constructor(props){
+    super(props);
+  }
+
+render() {
+  console.log("hello");
+  
+  return (
+    
+   <div className="tm-welcome-section">
+      <img src= {this.props.src} />
+      <p className="legend">{this.props.description}</p>
+    </div> 
+}
+}
+export default CarouselBanner;
+*/
