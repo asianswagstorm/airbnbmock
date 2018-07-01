@@ -44,7 +44,8 @@ render() {
   return (
     <Carousel onChange={(index)=>this.onCarouselChange(index)} showArrows={false} showThumbs={false}  interval = {3000} autoPlay={true}>
     {this.state.bannerList}
-   </Carousel>);
+   </Carousel>
+   );
 }
 }
 export default CarouselBanner;
