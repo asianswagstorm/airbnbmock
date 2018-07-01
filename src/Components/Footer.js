@@ -3,18 +3,26 @@ import ReactDOM from 'react-dom';
 import '../css/Footer.css';
 
 class Footer extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props
+    );
 
   }
-  
+  componentDidMount = () => {
+    window.googleTranslateElementInit = this.googleTranslateElementInit
+  }
+
+  googleTranslateElementInit = (language) => {
+    new window.google.translate.TranslateElement({pageLanguage: language, layout: window.google.translate.TranslateElement.FloatPosition.TOP_LEFT}, 'google_translate_element');
+    }
+
   render = () => {
       return (
        
 <div className="container">
        
      <div className="row tm-mb-medium">
-          <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
+          <div className="col-xl-3 col-lg-3 col-md-3 col-sm-6 mb-3">
             <h4 className="mb-4 tm-font-300">Airbnb</h4>
               <ul className="list">
               <a target="_blank" href="https://www.airbnb.ca/careers"><li>Careers</li></a>
@@ -24,7 +32,7 @@ class Footer extends Component {
               <a target="_blank" href="https://www.airbnb.ca/diversity"><li>Diversity & Belonging</li></a> 
               </ul>
           </div>
-          <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
+          <div className="col-xl-3 col-lg-3 col-md-3 col-sm-6 mb-3">
            <h4 className="mb-4 tm-font-300">Discover</h4>
               <ul className="list">
                 <a target="_blank" href="https://www.airbnb.ca/trust"><li>Trust & Safety</li></a>
@@ -37,7 +45,7 @@ class Footer extends Component {
               </ul>
           </div>
             
-          <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
+          <div className="col-xl-3 col-lg-3 col-md-3 col-sm-6 mb-3">
             <h4 className="mb-4 tm-font-300">Hosting</h4>
             <ul className="list">
             <a target="_blank" href="https://www.airbnb.ca/host/homes?from_footer=1"> <li>Why Host</li></a>
@@ -47,12 +55,14 @@ class Footer extends Component {
             </ul>
           </div>
 
-          <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
+          <div className="col-xl-3 col-lg-3 col-md-3 col-sm-6 mb-3">
+            <div className="mediaIcons"> 
                <ul className="social-icon">
-                         <a href="https://www.facebook.com/airbnb" className="fa fa-facebook"></a>
-                         <a href="https://twitter.com/airbnb" className="fa fa-twitter"></a>
-                         <a href="https://www.instagram.com/airbnb/" className="fa fa-instagram"></a>      
-                </ul>
+                         <li><a target="_blank" href="https://facebook.com/airbnb" className="fa fa-facebook"></a></li>
+                         <li><a target="_blank" href="https://twitter.com/airbnb" className="fa fa-twitter"></a></li>
+                         <li><a  target="_blank"href="https://www.instagram.com/airbnb/" className="fa fa-instagram"></a></li>      
+                </ul> 
+            </div>     
 
              <ul className="list">
              <a target="_blank" href="https://www.airbnb.ca/terms"> <li>Terms</li></a>
@@ -62,20 +72,12 @@ class Footer extends Component {
           </div>
       </div>
         
-      
+      <hr></hr>
         <div className="row">
           <p>&copy; Airbnb, Inc.</p>
               
-              
-                <select className="col-sm-4">
-                  <option>English</option>
-                  <option>Chinese Simplified</option>
-                  <option>Vietnamese</option>
-                  <option>Francais</option>
-                  <option>Italian</option>
-                  <option>Chinese Traditional</option>
-                </select>
-
+                <button className="col-sm-4" id="google_translate_element" ></button>
+               
                 <select className="col-sm-4">
                   <option>USD</option>
                   <option>VND</option>
@@ -87,9 +89,7 @@ class Footer extends Component {
                   <option>CLP</option>
                   <option>AUD</option>
                 </select>
-            
-        </div>
-      
+        </div> 
  </div>
    
     ); 

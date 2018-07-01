@@ -4,40 +4,34 @@ import CarouselBanner from "./addons/CarouselBanner";
 
 import '../css/Header.css';
 
-const banner = [
-    {id:0 ,src:"images/banners/banner1.jpg", description:"Some Place",},
-    {id:1 ,src:"images/banners/banner2.jpg", description: "Some Place"},
-    {id:2 ,src:"images/banners/banner3.jpg", description:"Some Place"},
-    {id:3 ,src:"images/banners/banner4.jpg", description:"Some Place"},
-    {id:4 ,src:"images/banners/banner5.jpg", description:"Some Place"},
-    {id:5 ,src:"images/banners/banner6.jpg", description:"Some Place"},
-    {id:6 ,src:"images/banners/banner7.jpg", description:"Some Place"},
-    {id:7 ,src:"images/banners/banner8.jpg", description:"Some Place"},
-    {id:8 ,src:"images/banners/banner9.jpg", description:"Some Place"},
-    {id:9 ,src:"images/banners/banner10.jpg",description:"Some Place"}
-];
-let description = "legend";
+
 class Header extends Component {
     constructor(props){
         super(props);
-      this.clickEvent =this.clickEvent.bind(this);  
+        this.state = {
+          descriptionPlaceholder: "",
+        };
+      this.clickEvent =this.clickEvent.bind(this); 
+      this.setDescription= this.setDescription.bind(this); 
     }
+
+    setDescription=(description)=>{
+      this.setState({descriptionPlaceholder : description})
+    }
+
     clickEvent =() =>{
       console.log("Clicked Search");
     }
-    
-    render = () => {
-      
 
-      console.log(banner.map((bannerImage,i)=>{
-        return <CarouselBanner imgSrc={bannerImage.src} description = {bannerImage.description} key={banner.id}/>
-}));
+    render = () => {
+
+      
       return (
 <div className="Header">
         {/*Nav Bar*/}
     <div className="tm-welcome-section">
 
-      <CarouselBanner/>
+      <CarouselBanner SETdescription={(x)=>this.setDescription(x)}/>
     
       <div className="container tm-navbar-container">
         <div className="row">
@@ -81,7 +75,7 @@ class Header extends Component {
             <div className="tm-search-form-container">
                 <form action="index.html" method="GET" className="form-inline tm-search-form">
                     <div className="form-group tm-search-box">
-                        <input type="text" name="keyword" className="form-control tm-search-input" placeholder= {description} /> 
+                        <input type="text" name="keyword" className="form-control tm-search-input" placeholder= {this.state.descriptionPlaceholder} /> 
                         
                         <input type="button" value="Search" className="form-control tm-search-submit" onClick ={() => this.clickEvent()}/>
                     </div>

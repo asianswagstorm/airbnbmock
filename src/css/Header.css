@@ -61,6 +61,7 @@ a:hover, a:focus, a.active {
 .nav-tabs .nav-link:hover {
     background-color: #EDAABC;
     color: white;
+
 }
 
 .tm-tab-links-container,

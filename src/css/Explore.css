@@ -1,0 +1,47 @@
+.project-item {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 25px;
+    padding: 0;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .project-overlay {
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: all ease-in-out 0.4s;
+    transition: all ease-in-out 0.4s;
+  }
+
+  .project-info {
+    padding: 12em 0;
+  }
+
+  .project-item img {
+    -webkit-transition: all ease-in-out 0.4s;
+    transition: all ease-in-out 0.4s;
+    width:300px;
+    height:300px;
+  }
+  .project-item:hover img {
+    transform: scale(1.1);
+  }
+  
+  .project-overlay h1 {
+    color: #ffffff;
+    margin: 0;
+  }
+
+  .project-item:hover .project-overlay {
+    opacity: 1;
+  }
+  
+  
