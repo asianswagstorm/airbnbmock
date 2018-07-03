@@ -75,9 +75,7 @@ class Header extends Component {
               <div className="tm-search-form-container">
                 <form action="index.html" method="GET" className="form-inline tm-search-form">
                   <div className="form-group tm-search-box">
-                    <input type="text" name="keyword" className="form-control tm-search-input" placeholder={this.state.descriptionPlaceholder} />
-
-                    <input type="button" value="Search" className="form-control tm-search-submit" onClick={() => this.clickEvent()} />
+                    <input type="text" name="search" className="form-control tm-search-input" placeholder={"Try: \"\ " + this.state.descriptionPlaceholder + "\"\ "} />
                   </div>
                 </form>
               </div>
