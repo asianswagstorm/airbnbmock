@@ -50,6 +50,7 @@ render() {
 }
 export default CarouselBanner;
 
+//onChange={(index)=>this.onCarouselChange(index)}
 /*
 export default() =>(
 <Carousel autoPlay>

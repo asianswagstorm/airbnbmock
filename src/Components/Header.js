@@ -46,9 +46,7 @@ class Header extends Component {
                   </button>
                   <div id="mainNav" className="collapse navbar-collapse tm-bg-white">
                     <ul className="navbar-nav ml-auto">
-                      {/* <li className="nav-item">
-                        <img className="nav-item" src="images/logo.png" alt="Site logo" />
-                      </li> */}
+                  
                       <li className="nav-item">
                         <a href="https://www.airbnb.ca/login" className="nav-link tm-nav-link tm-text-white">Login</a>
                       </li>
