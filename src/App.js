@@ -1,27 +1,23 @@
 import React, { Component } from 'react';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import ReactDOM from 'react-dom';
-import logo from './logo.svg';
-import './css/App.css';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Header from './Components/Header';
-import Explore from './Components/Explore';
-import Airbnbplus from './Components/Airbnbplus';
-import Main from './Components/Main';
-import Footer from './Components/Footer';
+import Home from "./Components/Home";
+import Login from "./Components/Login";
 class App extends Component {
 
   render=()=>{
     return (
-      <div className="App">
-          <Header/>
-          <Explore/>
-          <Airbnbplus/>
-            <Main/>
-            <hr/>
-          <Footer/>
-      </div>
+      <BrowserRouter>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/Login" exact component ={Login} />
+      </Switch>
+    </BrowserRouter>
     );
   }
 }
 
 export default App;
+
+/*       
+           */
