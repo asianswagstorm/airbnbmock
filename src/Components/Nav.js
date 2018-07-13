@@ -1,13 +1,22 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import ReactModalLogin from 'react-modal-login';
+import { Modal, Button } from 'antd';
 import Login from "./Login";
+import '../css/Nav.css';
 
 class Nav extends Component {
-   
+    state = {
+        LoginModalVisible: false,
+      }
+
+      setLoginModalVisible(LoginModalVisible) {
+          console.log("Pressed Login");
+        this.setState({ LoginModalVisible });
+      }
+
     render = () => {
         return (
-        <div> 
+            <div>
             <div className="row">
                 <div className="col-lg-12">
                     <nav className="navbar navbar-expand-lg narbar-light">
@@ -21,18 +30,18 @@ class Nav extends Component {
                         <div id="mainNav" className="collapse navbar-collapse tm-bg-white">
                             <ul className="navbar-nav ml-auto">
 
-                                <li className="nav-item" >
-                                    <a href="#" className="nav-link tm-nav-link tm-text-white" data-target="#loginModal" data-toggle="modal">Login</a>
-                                </li>
-                        
                                 <li className="nav-item">
-                                    <a href="#" className="nav-link tm-nav-link tm-text-white">Sign Up</a>
+                                <li onClick={() => this.setLoginModalVisible(true)} className="nav-link tm-nav-link tm-text-white">Login</li>
                                 </li>
+        
                                 <li className="nav-item">
-                                    <a href="Help" className="nav-link tm-nav-link tm-text-white">Help</a>
+                                    <li className="nav-link tm-nav-link tm-text-white">Sign Up</li>
                                 </li>
                                 <li className="nav-item">
-                                    <a href="https://www.airbnb.ca/host/homes?from_nav=1" className="nav-link tm-nav-link tm-text-white">Become a host</a>
+                                    <li className="nav-link tm-nav-link tm-text-white">Help</li>
+                                </li>
+                                <li className="nav-item">
+                                    <li  className="nav-link tm-nav-link tm-text-white">Become a host</li>
                                 </li>
                             </ul>
                         </div>
@@ -40,38 +49,17 @@ class Nav extends Component {
                   </div>
                   </div>  
 
-     <div id="loginModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"> &times;</button>
-                    <h4>Login</h4>
-                </div>
-                <div class="modal-body">
-                <form class="form-inline">
-                   <div class="form-group">
-                       <label class="sr-only" for="email">Email</label>
-                       <input type="text" class="form-control input-sm" placeholder="Email" id="email" name="email"/>
-                       </div>
-                        <div class="form-group">  
-                          
-                           <label class="sr-only" for="password">Password</label>
-                             <input type="password" class="form-control input-sm" placeholder="Password" id="password" name="password"/></div>
-                       <div class="checkbox">
-                       <label>
-                       <input type="checkbox"/> Remember me
-                       </label>
-                         </div>
-                    
-                       <button type="submit" class="btn btn-info btn-xs">Sign in</button>
-                       <button type="button" class="btn btn-default btn-xs" data-dismiss="modal">Cancel</button> 
-                
-                    </form>
-                </div>
-            </div>
+        <Modal
+        style={{ top: 0 }}
+        wrapClassName="vertical-center-modal"
+        visible={this.state.LoginModalVisible}
+        onOk={() => this.setLoginModalVisible(false)}
+        onCancel={() => this.setLoginModalVisible(false)}
+        >
+        <Login/>
+        </Modal>
         </div>
-        </div>
-        </div>
+
         );
     }
 }
