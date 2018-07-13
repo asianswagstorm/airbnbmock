@@ -1,22 +1,31 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Modal, Button } from 'antd';
+import Modal from "react-responsive-modal";
 import Login from "./Login";
 import '../css/Nav.css';
 
-class Nav extends Component {
-    state = {
-        LoginModalVisible: false,
-      }
+const styles = {
+    fontFamily: "sans-serif",
+    textAlign: "center"
+  };
 
-      setLoginModalVisible(LoginModalVisible) {
-          console.log("Pressed Login");
-        this.setState({ LoginModalVisible });
-      }
+class Nav extends Component {
+     state = {
+    open: false
+  };
+
+  onOpenModal = () => {
+    this.setState({ open: true });
+  };
+
+  onCloseModal = () => {
+    this.setState({ open: false });
+  };
 
     render = () => {
+        const { open } = this.state;
         return (
-            <div>
+            <div style={styles}> 
             <div className="row">
                 <div className="col-lg-12">
                     <nav className="navbar navbar-expand-lg narbar-light">
@@ -31,7 +40,7 @@ class Nav extends Component {
                             <ul className="navbar-nav ml-auto">
 
                                 <li className="nav-item">
-                                <li onClick={() => this.setLoginModalVisible(true)} className="nav-link tm-nav-link tm-text-white">Login</li>
+                                <li onClick={this.onOpenModal} className="nav-link tm-nav-link tm-text-white">Login</li>
                                 </li>
         
                                 <li className="nav-item">
@@ -49,13 +58,7 @@ class Nav extends Component {
                   </div>
                   </div>  
 
-        <Modal
-        style={{ top: 0 }}
-        wrapClassName="vertical-center-modal"
-        visible={this.state.LoginModalVisible}
-        onOk={() => this.setLoginModalVisible(false)}
-        onCancel={() => this.setLoginModalVisible(false)}
-        >
+         <Modal open={open} onClose={this.onCloseModal} center>
         <Login/>
         </Modal>
         </div>
