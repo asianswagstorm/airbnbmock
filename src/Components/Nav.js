@@ -11,19 +11,29 @@ const styles = {
 
 class Nav extends Component {
      state = {
-    open: false
+    LoginOpen: false,
+    SignUpOpen:false
   };
 
-  onOpenModal = () => {
-    this.setState({ open: true });
+  onOpenLoginModal = () => {
+    this.setState({ LoginOpen: true });
   };
 
-  onCloseModal = () => {
-    this.setState({ open: false });
+  onOpenSignUpModal = () => {
+    this.setState({ SignUpOpen: true });
+  };
+
+  onCloseLoginModal = () => {
+    this.setState({ LoginOpen: false });
+  };
+
+  onCloseSignUpModal = () => {
+    this.setState({ SignUpOpen: false });
   };
 
     render = () => {
-        const { open } = this.state;
+        const { LoginOpen , SignUpOpen } = this.state;
+      
         return (
             <div style={styles}> 
             <div className="row">
@@ -40,11 +50,11 @@ class Nav extends Component {
                             <ul className="navbar-nav ml-auto">
 
                                 <li className="nav-item">
-                                <li onClick={this.onOpenModal} className="nav-link tm-nav-link tm-text-white">Login</li>
+                                <li onClick={this.onOpenLoginModal} className="nav-link tm-nav-link tm-text-white">Login</li>
                                 </li>
         
                                 <li className="nav-item">
-                                    <li className="nav-link tm-nav-link tm-text-white">Sign Up</li>
+                                    <li onClick={this.onOpenSignUpModal} className="nav-link tm-nav-link tm-text-white">Sign Up</li>
                                 </li>
                                 <li className="nav-item">
                                     <li className="nav-link tm-nav-link tm-text-white">Help</li>
@@ -58,8 +68,11 @@ class Nav extends Component {
                   </div>
                   </div>  
 
-         <Modal open={open} onClose={this.onCloseModal} center>
+         <Modal open={LoginOpen} onClose={this.onCloseLoginModal} center>
         <Login/>
+        </Modal>
+        <Modal open={SignUpOpen} onClose={this.onCloseSignUpModal} center>
+          <p>Sign up modal</p>
         </Modal>
         </div>
 
