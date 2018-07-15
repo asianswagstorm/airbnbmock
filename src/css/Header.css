@@ -1,7 +1,7 @@
 
-a { transition: all 0.3s ease;
+.Header a { transition: all 0.3s ease;
 color: white; }
-a:hover, a:focus, a.active {
+.Header a:hover, a:focus, a.active {
     color: #f0f7fa;
     text-decoration: none;
 }

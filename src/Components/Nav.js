@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Modal from "react-responsive-modal";
 import Login from "./Login";
+import SignUp from './Signup';
 import '../css/Nav.css';
+
 
 const styles = {
     fontFamily: "sans-serif",
@@ -72,7 +74,7 @@ class Nav extends Component {
         <Login/>
         </Modal>
         <Modal open={SignUpOpen} onClose={this.onCloseSignUpModal} center>
-          <p>Sign up modal</p>
+         <SignUp/>
         </Modal>
         </div>
 
