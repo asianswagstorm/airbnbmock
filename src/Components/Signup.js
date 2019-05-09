@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import '../css/SignUp.css';
-import validator from 'validator';
-
 
 class SignUp extends Component {
     constructor(props){
